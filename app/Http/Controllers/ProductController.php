@@ -15,9 +15,21 @@ class ProductController extends Controller
         return ProductResource::collection($product);
     }
 
-    // Покупка товара
-    public function store(string $id)
+    // Добавление товара
+    public function store()
     {
-        //
+        return "";
+    }
+
+    // Обновление товара
+    public function update()
+    {
+        return "";
+    }
+
+    // Удаление товара
+    public function destroy()
+    {
+        return "";
     }
 }

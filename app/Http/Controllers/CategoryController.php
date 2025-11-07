@@ -7,6 +7,7 @@ use App\Models\Category;
 
 use App\Http\Resources\CategoryResource;
 use App\Http\Resources\ProductResource;
+use PHPUnit\Framework\MockObject\Stub\ReturnSelf;
 
 
 class CategoryController extends Controller
@@ -36,5 +37,25 @@ class CategoryController extends Controller
         }
 
         return ProductResource::collection($category->products);
-    }    
+    }
+
+
+    // Добавление категории
+    public function store()
+    {
+        return "";
+    }
+
+    // Обновление категории
+    public function update()
+    {
+        return "";
+    }
+
+    // Удаление категории
+    public function destroy()
+    {
+        return "";
+    }
+
 }

@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use App\Models\Category;
-
+use App\Models\Order;
 
 class Product extends Model
 {
@@ -28,4 +28,12 @@ class Product extends Model
     {
         return $this->belongsToMany(Category::class);
     }
+
+    // У одного продукта может быть много заказов
+    // belongsToMany - многие ко многим
+    public function orders(): BelongsToMany
+    {
+        return $this->belongsToMany(Order::class);
+    }
+
 }
