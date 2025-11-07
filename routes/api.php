@@ -23,7 +23,7 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('categories', [CategoryController::class, 'index']); // Получения списка категорий
     Route::get('/categories/{category_id}/products', [CategoryController::class, 'show']); // Получения списка товаров категории
     
-    Route::get('/products/{product_id}', [ProductController::class, 'get']); // Просмотр товара
+    Route::get('/products/{product_id}', [ProductController::class, 'index']); // Просмотр товара
     Route::post('/products/{product_id}/buy', [ProductController::class,'store']); // Покупка товара
 
 
